@@ -10,26 +10,34 @@ var database,foodS,foodStock
 
 function preload()
 {
-  dog1= loadImage("images/dogImg.png")
-  
-  happyDog=loadImage("images/dogImg1.png")
+
+ 
 }
 
 function setup() {
-  createCanvas(800, 700);
+  createCanvas(800, 800);
+  background('green')
   
 
 
-  dog1 = createSprite(200,200,30,30);
+  dog1 =  new Doggo(400,400,30,30);
+  dog2 = new Doggo(400,400,30,30);
+  
 }
 
 
 function draw() {  
   drawSprites();
-  
+  dog1.display();
+
   if (keyWentDown(UP_ARROW)){
-    dog1.addImage(happyDog)
-  }
+    
+    dog2.display();
+    dog1.velocityX = 100
+   
+}
+
+  
 
 }
 

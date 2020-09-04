@@ -7,9 +7,19 @@ class Doggo{
         this.width = width;
         this.height = height;
         this.image = loadImage("images/dogImg.png")
-        this.image = loadImage("images/dogImg1.png")
+        this.Happyimage = loadImage("images/dogImg1.png")
+        
     }
     display(){
+        var dog1 = this.image
+        dog1;
+        image(this.image, this.body.position.x, this.body.position.y, 300, 300)
+  if (keyWentDown(UP_ARROW)){
+    
+    image(this.Happyimage, this.body.position.x, this.body.position.y, 300, 300)
+    this.Happyimage.velocityX = 100
+   
+}
 
     }
 }
